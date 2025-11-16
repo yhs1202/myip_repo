@@ -3,7 +3,7 @@
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>user</spirit:library>
   <spirit:name>i2c_master</spirit:name>
-  <spirit:version>1.0</spirit:version>
+  <spirit:version>1.1</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>S00_AXI</spirit:name>
@@ -199,7 +199,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -259,14 +259,14 @@
         <spirit:displayName>Verilog Synthesis</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>i2c_master_v1_0</spirit:modelName>
+        <spirit:modelName>i2c_master_v1_1</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c4d7aa59</spirit:value>
+            <spirit:value>444d311e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -275,14 +275,14 @@
         <spirit:displayName>Verilog Simulation</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>i2c_master_v1_0</spirit:modelName>
+        <spirit:modelName>i2c_master_v1_1</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c4d7aa59</spirit:value>
+            <spirit:value>444d311e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -700,7 +700,7 @@
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_74b5137e</spirit:name>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
     </spirit:choice>
@@ -714,7 +714,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/i2c_master_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>hdl/i2c_master_v1_1_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -722,15 +722,15 @@
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/i2c_master_v1_0.v</spirit:name>
+        <spirit:name>hdl/i2c_master_v1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_75a3a2e8</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_1fdf770a</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/i2c_master_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>hdl/i2c_master_v1_1_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -738,7 +738,7 @@
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/i2c_master_v1_0.v</spirit:name>
+        <spirit:name>hdl/i2c_master_v1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -777,7 +777,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/i2c_master_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/i2c_master_v1_1.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_0e5443b4</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -845,7 +845,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">i2c_master_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">i2c_master_v1_1</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -856,43 +856,62 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>i2c_master_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-11-16T14:14:56Z</xilinx:coreCreationDateTime>
+      <xilinx:displayName>i2c_master_v1.1</xilinx:displayName>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-11-16T16:28:24Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@27d8e021_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@311d3488_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@53ebb3d3_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@32238d0b_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5faa360e_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@261ca3e5_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@11423b21_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4120069e_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4584a8db_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@935537a_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7705083b_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c4694a_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@39d1de6b_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ca733f3_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@361b5d08_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d569ae7_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b101b97_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c580bb6_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@66a7787c_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cd15b6d_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b6fa609_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5396d47b_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@37e12afe_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52f99e4d_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3042ec02_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e7223da_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15bbd6e7_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a0eefa7_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ecb6fda_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78ce9a9_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d67acd8_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9d109fd_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@714eb44a_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8752317_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2725e1fe_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3de62898_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b1f8189_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@432ee7f9_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@443a4100_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6efaa3d9_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@170baede_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b541532_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f6e857f_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c3dfc85_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e4f515e_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2823345f_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@558bab92_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40361417_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a3c4d3c_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bb11b41_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ed941a_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ffe42d7_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@558617e_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d6e2f9_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bf42f22_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78a72a37_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@162dc926_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37b35d8d_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e57e46a_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@571e477b_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f863de5_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59e36734_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1641bdb2_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@485d3248_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d6d29c5_ARCHIVE_LOCATION">c:/Users/kccistc/Desktop/ip_repo/i2c_master_1.1</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a6aebf4"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a63f3fc"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a7d68db6"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5185f60c"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="bc801981"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="0577202f"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="4264d6d4"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

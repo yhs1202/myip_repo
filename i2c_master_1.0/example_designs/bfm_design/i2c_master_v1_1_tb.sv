@@ -1,11 +1,11 @@
 
 `timescale 1ns / 1ps
-`include "i2c_master_v1_0_tb_include.svh"
+`include "i2c_master_v1_1_tb_include.svh"
 
 import axi_vip_pkg::*;
-import i2c_master_v1_0_bfm_1_master_0_0_pkg::*;
+import i2c_master_v1_1_bfm_1_master_0_0_pkg::*;
 
-module i2c_master_v1_0_tb();
+module i2c_master_v1_1_tb();
 
 
 xil_axi_uint                            error_cnt = 0;
@@ -104,7 +104,7 @@ axi_ready_gen                           awready_gen2;
 axi_ready_gen                           wready_gen2;  
 axi_ready_gen                           arready_gen2;  
 xil_axi_payload_byte                    data_mem[xil_axi_ulong];  
-i2c_master_v1_0_bfm_1_master_0_0_mst_t          mst_agent_0;
+i2c_master_v1_1_bfm_1_master_0_0_mst_t          mst_agent_0;
 
   `BD_WRAPPER DUT(
       .ARESETN(reset), 

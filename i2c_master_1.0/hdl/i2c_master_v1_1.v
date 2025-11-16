@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-	module i2c_master_v1_0 #
+	module i2c_master_v1_1 #
 	(
 		// Users to add parameters here
 
@@ -45,20 +45,19 @@
 		output wire [1 : 0] s00_axi_rresp,
 		output wire  s00_axi_rvalid,
 		input wire  s00_axi_rready
-	);
-
+	);	
+	
 	wire [6:0] addr;
 	wire rw;
 	wire i2c_en;
 	wire [7:0] tx_data;
 	wire [7:0] rx_data;
 
-
 // Instantiation of Axi Bus Interface S00_AXI
-	i2c_master_v1_0_S00_AXI # ( 
+	i2c_master_v1_1_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
-	) i2c_master_v1_0_S00_AXI_inst (
+	) i2c_master_v1_1_S00_AXI_inst (
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -81,11 +80,13 @@
 		.S_AXI_RVALID(s00_axi_rvalid),
 		.S_AXI_RREADY(s00_axi_rready),
 		.addr(addr),
-		.tx_data(tx_data),
-		.i2c_en(i2c_en),
 		.rw(rw),
+		.i2c_en(i2c_en),
+		.tx_data(tx_data),
 		.rx_data(rx_data)
 	);
+
+
 
 	// Add user logic here
 	i2c_master i2c_master_inst (

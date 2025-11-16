@@ -1,10 +1,10 @@
 
 `timescale 1 ns / 1 ps
 
-	module i2c_master_v1_0_S00_AXI #
+	module i2c_master_v1_1_S00_AXI #
 	(
 		// Users to add parameters here
-
+ 
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -17,7 +17,7 @@
 		// Users to add ports here
 		output wire [6:0] addr,		// 7-bit I2C slave address, slv_reg0[6:0]
 		output wire rw,		        // read/write bit, slv_reg0[7]
-		output wire i2c_en,
+		output wire i2c_en,			// i2c enable signal, slv_reg0[8]
 		output wire [7:0] tx_data,	// data to be transmitted, slv_reg1
 		input wire [7:0] rx_data,	// data received, slv_reg2
 		input wire ready,			// indicates that i2c transaction is done, slv_reg3[0]
@@ -406,6 +406,7 @@
 	// Add user logic here
 	assign addr = slv_reg0[6:0];
 	assign rw = slv_reg0[7];
+	assign i2c_en = slv_reg0[8];
 	assign tx_data = slv_reg1[7:0];
 	// User logic ends
 
